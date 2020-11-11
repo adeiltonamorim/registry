@@ -12,5 +12,3 @@ deploy:
     docker push adeiltonamorim/registry;
   on:
     branch: main
-notifications:
-  email: false
