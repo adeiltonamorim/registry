@@ -1,0 +1,41 @@
+#Server Specifics
+server:
+  port: 8761
+
+error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: eureka-server
+
+#Eureka Specifics
+
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#    enableSelfPreservation: false
+
+##Servidor Web
+#server.port=8761
+##server.servlet.context-path=/registry
+#
+##Logging
+#logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+#logging.level.org.hibernate.SQL=debug
+#
+##Eureka
+##eureka.instance.hostname=localhost
+#eureka.client.register-with-eureka=false
+#eureka.client.fetch-registry=false
+##eureka.client.service-url.default-zone:http://${eureka.instance.hostname}:${server.port}/eureka/
+#
+##error.whitelabel.enabled=false
